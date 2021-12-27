@@ -1,8 +1,19 @@
 <template>
-  <div class="page page-home">
-    <template>home</template>
-    {{ userInfo.userName }}
-  </div>
+  <view class="page page-home">
+    <!-- <scroll-view scroll-x>
+
+      <template>home</template>
+      {{ userInfo.userName }}
+    </scroll-view> -->
+    <view>132</view>
+    <view>132</view>
+    <view>13</view>
+    <view>78</view>
+    <view>99</view>
+    <view>136</view>
+    <view>135</view>
+    <view>134</view>
+  </view>
 </template>
 <script>
 import ComponentPanel from "@/components/common/ez-panel/ez-panel.vue";
@@ -24,10 +35,11 @@ export default {
   onLoad(e) {},
   onReady() {},
   onShow() {
-    this.requestData();
+    // this.requestData();
   },
   onHide() {},
   methods: {
+    // 请求数据
     async requestData() {
       const bankInfo = await to(
         requestGetBankInfo("510902199507236534", "曾小明")
@@ -60,6 +72,9 @@ export default {
 
 <style lang="scss" scoped>
 .page-home {
-  background-color: #f0f;
+  // background-color: #f0f;
+  view {
+    height: 600rpx;
+  }
 }
 </style>

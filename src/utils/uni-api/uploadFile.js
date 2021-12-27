@@ -25,46 +25,46 @@ const uploadFile = (url, filePath, name, header, formData, timeout) => {
   const isDev = getIsDev()
   // #ifdef MP-ALIPAY
   // #endif
-  const httpExp = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/
-  if (!url) {
-    showModal('请求地址url为空, 上传文件请求已被终止！')
-  }
-  // 不是以http/https开头的路径
-  if (!httpExp.test(url)) {
-    url = config.requestUrl + url
-  }
-  return new Promise((resolve, reject) => {
-    uni.uploadFile({
-      url,
-      filePath,
-      name,
-      header,
-      formData,
-      timeout,
-      success(res) {
-        const { isOpenDataEncrypt } = config
-        // 开启数据加密
-        if (isOpenDataEncrypt) {
-          showModal('目前文件上传解密有点小问题')
-          resolve(true)
-          return
-          const resData = res.data // 服务器返回的数据
-          console.log(resData, 678)
-          var newData = Decrypt(resData)
-          console.log(newData, 789)
-          // resData = JSON.parse(resData)
-        } else {
-          resolve(res)
-        }
-      },
-      fail(err) {
-        if (isDev) {
-          console.log('uploadFile 接口调用失败 => ', err)
-        }
-        reject(err)
-      },
-    })
-  })
+  // const httpExp = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/
+  // if (!url) {
+  //   showModal('请求地址url为空, 上传文件请求已被终止！')
+  // }
+  // // 不是以http/https开头的路径
+  // if (!httpExp.test(url)) {
+  //   url = config.requestUrl + url
+  // }
+  // return new Promise((resolve, reject) => {
+  //   uni.uploadFile({
+  //     url,
+  //     filePath,
+  //     name,
+  //     header,
+  //     formData,
+  //     timeout,
+  //     success(res) {
+  //       const { isOpenDataEncrypt } = config
+  //       // 开启数据加密
+  //       if (isOpenDataEncrypt) {
+  //         showModal('目前文件上传解密有点小问题')
+  //         resolve(true)
+  //         return
+  //         const resData = res.data // 服务器返回的数据
+  //         console.log(resData, 678)
+  //         var newData = Decrypt(resData)
+  //         console.log(newData, 789)
+  //         // resData = JSON.parse(resData)
+  //       } else {
+  //         resolve(res)
+  //       }
+  //     },
+  //     fail(err) {
+  //       if (isDev) {
+  //         console.log('uploadFile 接口调用失败 => ', err)
+  //       }
+  //       reject(err)
+  //     },
+  //   })
+  // })
 }
 
 export { uploadFile }

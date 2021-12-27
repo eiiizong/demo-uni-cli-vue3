@@ -1,6 +1,7 @@
 <template>
   <div class="page page-home">
     <template>home</template>
+    {{userInfo.userName}}
   </div>
 </template>
 <script>

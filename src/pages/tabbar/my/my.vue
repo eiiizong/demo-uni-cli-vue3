@@ -6,7 +6,7 @@
 <script>
 import ComponentPanel from "@/components/common/ez-panel/ez-panel.vue";
 
-import { navigateTo, showModal, request } from "@/utils/uni-api"; // 封装过后的api，推荐使用。方便以后统一修改，便于维护。
+import { navigateTo, showModal } from "@/plugins/uni-api";
 
 import { USER_INFO } from "@/store/constants"; // 常量
 import { mapGetters } from "vuex";

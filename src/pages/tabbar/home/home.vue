@@ -1,13 +1,14 @@
 <template>
   <div class="page page-home">
     <template>home</template>
-    {{userInfo.userName}}
+    {{ userInfo.userName }}
   </div>
 </template>
 <script>
 import ComponentPanel from "@/components/common/ez-panel/ez-panel.vue";
 
-import { navigateTo, showModal, request } from "@/utils/uni-api"; // 封装过后的api，推荐使用。方便以后统一修改，便于维护。
+import { navigateTo, showModal } from "@/plugins/uni-api";
+import { requestGetBankInfo } from "@/server";
 
 import { USER_INFO } from "@/store/constants"; // 常量
 import { mapGetters } from "vuex";
@@ -21,7 +22,9 @@ export default {
   setup() {},
   onLoad(e) {},
   onReady() {},
-  onShow() {},
+  onShow() {
+    requestGetBankInfo("510902199507236534", "曾小明");
+  },
   onHide() {},
   methods: {},
   computed: {

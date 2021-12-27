@@ -1,4 +1,4 @@
-import { request } from "~/plugins/uni-api/index.js";
+import { customRequest } from "@/utils/custom-api";
 
 /**
  * 获取个人社保卡信息
@@ -20,7 +20,7 @@ const requestGetBankInfo = (
     aac003
   };
   return new Promise((resolve, reject) => {
-    request(
+    customRequest(
       "/frontRestService/frontBcpDataRestService/getWebServiceDataTwo",
       data,
       {},

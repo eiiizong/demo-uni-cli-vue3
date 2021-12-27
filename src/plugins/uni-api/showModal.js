@@ -1,3 +1,5 @@
+import { getIsDevEnv } from "@/utils/get";
+
 /**
  * 显示模态弹窗，类似于标准 html 的消息框：alert、confirm。
  * @param {string} content 提示的内容
@@ -7,11 +9,11 @@
  * @param {string} cancelColor 取消按钮的文字颜色，默认值“#000000”
  * @param {string} confirmText 确定按钮的文字，默认值“确定”
  * @param {string} confirmColor 确定按钮的文字颜色，默认值“#576B95”
- * @support 
+ * @support
  * 微信小程序支持情况说明：https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showModal.html
- * 
+ *
  * uniapp支持情况说明：https://uniapp.dcloud.io/api/ui/prompt?id=showmodal
- * 
+ *
  * @returns { Promise }
  * @example
   showModal('提示内容').then(res => {
@@ -24,17 +26,18 @@
 */
 const showModal = (
   content,
-  title = '提示',
+  title = "提示",
   showCancel = false,
-  cancelText = '取消',
-  cancelColor = '#000000',
-  confirmText = '确定',
-  confirmColor = '#576B95'
+  cancelText = "取消",
+  cancelColor = "#000000",
+  confirmText = "确定",
+  confirmColor = "#576B95"
 ) => {
   // 当前环境是否为开发环境
-  const isDev = process.env.NODE_ENV === 'development'
+  const isDevEnv = getIsDevEnv();
   // #ifdef MP-ALIPAY
   // #endif
+
   return new Promise((resolve, reject) => {
     uni.showModal({
       title,
@@ -46,22 +49,24 @@ const showModal = (
       confirmColor,
       success(res) {
         if (res.confirm) {
-          resolve(true)
+          resolve(true);
         } else if (res.cancel) {
-          if (isDev) {
-            console.log(`showModal 接口调用成功，您点击了${cancelText}按钮`)
+          resolve(false);
+        } else {
+          if (isDevEnv) {
+            console.error("showModal 接口调用出现未知错误 => ", res);
           }
-          reject(false)
+          reject(res);
         }
       },
       fail(err) {
-        if (isDev) {
-          console.log('showModal 接口调用失败 => ', err)
+        if (isDevEnv) {
+          console.error("showModal 接口调用失败 => ", err);
         }
-        reject(err)
-      },
-    })
-  })
-}
+        reject(err);
+      }
+    });
+  });
+};
 
-export { showModal }
+export { showModal };

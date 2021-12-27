@@ -1,7 +1,0 @@
-export { requestGetBankInfo } from './requestGetBankInfo'
-export { requestGetPersonalInfo } from './requestGetPersonalInfo'
-export { requestSavePersonalInfo } from './requestSavePersonalInfo'
-export { requestGetHo08 } from './requestGetHo08'
-export { requestGetHo07Info } from './requestGetHo07Info'
-export { requestJudgeFaceRecognition } from './requestJudgeFaceRecognition'
-export { requestGetYGFFUserInfo } from './requestGetYGFFUserInfo'

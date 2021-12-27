@@ -7,6 +7,7 @@
 <script>
 import ComponentPanel from "@/components/common/ez-panel/ez-panel.vue";
 
+import { to } from "@/utils/tool";
 import { navigateTo, showModal } from "@/plugins/uni-api";
 import { requestGetBankInfo } from "@/server";
 
@@ -23,10 +24,17 @@ export default {
   onLoad(e) {},
   onReady() {},
   onShow() {
-    requestGetBankInfo("510902199507236534", "曾小明");
+    this.requestData();
   },
   onHide() {},
-  methods: {},
+  methods: {
+    async requestData() {
+      const bankInfo = await to(
+        requestGetBankInfo("510902199507236534", "曾小明")
+      );
+      console.log("bankInfo", bankInfo);
+    }
+  },
   computed: {
     ...mapGetters([USER_INFO])
   },

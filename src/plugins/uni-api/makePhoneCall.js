@@ -1,4 +1,4 @@
-import { getIsDevEnv } from '~/plugins/big/utils/get/index'
+import { getIsDevEnv } from '@/utils/get'
 /**
  * 拨打电话
  * @param {string} phoneNumber 需要拨打的电话号码

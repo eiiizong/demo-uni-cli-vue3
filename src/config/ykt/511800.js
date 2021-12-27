@@ -3,7 +3,7 @@
   文件中保存的是一些常用配置 请谨慎更改 更改前请确认是否存在使用
 */
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDevEnv } from '~/plugins/big/utils/get/index'
+import { getIsDevEnv } from '@/utils/get'
 
 let requestUrl = ''
 const isDev = getIsDevEnv()

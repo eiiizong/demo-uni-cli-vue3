@@ -14,7 +14,7 @@ export { removeStorage } from "./removeStorage";
 export { clearStorage } from "./clearStorage";
 export { switchTab } from "./switchTab";
 export { downloadFile } from "./downloadFile";
-export { uploadFile } from "./uploadFile";
+// export { uploadFile } from "./uploadFile";
 
 export { redirectTo } from "./redirectTo";
 export { chooseImage } from "./chooseImage";

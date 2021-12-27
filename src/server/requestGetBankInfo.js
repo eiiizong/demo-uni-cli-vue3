@@ -17,7 +17,8 @@ const requestGetBankInfo = (
   const data = {
     methodName: "getBankInfo",
     aac002,
-    aac003
+    aac003,
+    chw017: "01"
   };
   return new Promise((resolve, reject) => {
     customRequest(

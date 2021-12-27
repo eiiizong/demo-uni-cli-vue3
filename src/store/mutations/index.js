@@ -1,4 +1,4 @@
-import { getIsDevEnv } from "~/plugins/big/utils/get/index";
+import { getIsDevEnv } from "@/utils/get";
 import { M_UPDATE_USER_INFO } from "@/store/constants/index.js";
 
 // 当前环境是否为开发环境

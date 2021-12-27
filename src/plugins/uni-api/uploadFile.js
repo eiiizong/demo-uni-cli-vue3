@@ -1,6 +1,6 @@
 import config from '@/config/index'
 import { Decrypt } from '~/plugins/big/utils/AES.js'
-import { getIsDevEnv } from '~/plugins/big/utils/get/index'
+import { getIsDevEnv } from '@/utils/get'
 import { hideLoading } from './hideLoading'
 import { showModal } from './index'
 /**

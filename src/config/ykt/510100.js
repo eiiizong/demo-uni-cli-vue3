@@ -4,7 +4,7 @@
 */
 
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDevEnv } from '~/plugins/big/utils/get/index'
+import { getIsDevEnv } from '@/utils/get'
 
 let requestUrl = ''
 const isDev = getIsDevEnv()

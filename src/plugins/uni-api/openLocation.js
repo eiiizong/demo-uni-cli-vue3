@@ -1,4 +1,4 @@
-import { getIsDevEnv } from '~/plugins/big/utils/get/index'
+import { getIsDevEnv } from '@/utils/get'
 /**
  * 使用微信内置地图查看位置
  * @param {number} latitude 纬度，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系

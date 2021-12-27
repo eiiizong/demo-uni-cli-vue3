@@ -1,8 +1,8 @@
-import { getIsDev } from "@/utils/get/index";
+import { getIsDevEnv } from "@/utils/get/index";
 import { M_UPDATE_USER_INFO } from "@/store/constants/index.js";
 
 // 当前环境是否为开发环境
-const isDev = getIsDev();
+const isDev = getIsDevEnv();
 
 const mutations = {
   // 更新用户信息

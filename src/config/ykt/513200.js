@@ -4,10 +4,10 @@
 */
 
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 
 let requestUrl = ''
-const isDev = getIsDev()
+const isDev = getIsDevEnv()
 if (isDev) {
   requestUrl = testRequestUrl
 } else {
@@ -35,7 +35,7 @@ const config513200 = {
   isOpenYGFF: true,
   // 特殊页面 不同地市的不同页面配置
   specialPages: {},
-  // 关闭页面内某些模块 true 关闭 
+  // 关闭页面内某些模块 true 关闭
   configClosePageModule: {
     pageTabbarHome: {
       convenientService: true, // 便捷服务

@@ -4,10 +4,10 @@
 */
 
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 
 let requestUrl = ''
-const isDev = getIsDev()
+const isDev = getIsDevEnv()
 if (isDev) {
   requestUrl = testRequestUrl
 } else {

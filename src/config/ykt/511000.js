@@ -1,13 +1,13 @@
-/* 
+/*
   配置文件
   文件中保存的是一些常用配置 请谨慎更改 更改前请确认是否存在使用
 */
 
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 
 let requestUrl = ''
-const isDev = getIsDev()
+const isDev = getIsDevEnv()
 if (isDev) {
   requestUrl = testRequestUrl
 } else {
@@ -36,7 +36,7 @@ const config511000 = {
   // 是否开启数据加密，配合后台使用 true 开启
   isOpenDataEncrypt: false,
   isOpenThreeFundedVersion: true, // 是否开启三资版本 h5打包编译有效
-  
+
   // #ifdef H5
   isCompileToTianfuCitizenCloud: true, // 是否h5打包编译时编译到天府市民云 兼容文件上传 不编译至天府市民云请手动关闭
   // #endif

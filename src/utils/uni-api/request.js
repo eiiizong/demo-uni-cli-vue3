@@ -1,7 +1,7 @@
 import config from '@/config/index.js'
 // import { Decrypt } from '@/utils/AES.js'
 import { showModal, showLoading, hideLoading, getStorageSync } from './index'
-import { getIsDev } from '@/utils/get'
+import { getIsDevEnv } from '@/utils/get'
 /**
  * 发起 HTTPS 网络请求
  * @param {string} url 开发者服务器接口地址，已默认加上前缀
@@ -46,7 +46,7 @@ const request = (
   enableCache = false
 ) => {
   // 当前环境是否为开发环境
-  const isDev = getIsDev()
+  const isDev = getIsDevEnv()
 
   // return new Promise((resolve, reject) => {
   //   if (loading) {

@@ -1,13 +1,13 @@
-/* 
+/*
   配置文件
   文件中保存的是一些常用配置 请谨慎更改 更改前请确认是否存在使用
 */
 
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 
 let requestUrl = ''
-const isDev = getIsDev()
+const isDev = getIsDevEnv()
 if (isDev) {
   requestUrl = testRequestUrl
 } else {
@@ -53,22 +53,22 @@ const config512000 = {
     // isCheckDisability: 申报是否进行残疾人校验 [true|false] 默认 false
     // isCheckFileAndRegister: 申报是否进行建档立卡校验 [true|false] 默认 false
     // isCheckDeclare:  是否开启申报校验 [true|false] 默认 false
-	declare_20007: { 
+	declare_20007: {
 		closeAuth: [],
 		unableDeclareTip: '此项目暂未开始申报受理',
 		isShowSSCSInfo:true,
 	 },
-	declare_20055: { 
+	declare_20055: {
 		closeAuth: [],
 		unableDeclareTip: '此项目暂未开始申报受理',
 	 },
-	declare_20447: { 
+	declare_20447: {
 		unableDeclareTip: '请将此项目相关信息报给乡镇工作人员进行受理',
 	 },
-	declare_20833: { 
+	declare_20833: {
 		unableDeclareTip: '请将此项目相关信息报给乡镇工作人员进行受理',
 	 },
-	declare_20836: { 
+	declare_20836: {
 		unableDeclareTip: '请将此项目相关信息报给乡镇工作人员进行受理',
 	 },
 		declare_20022: { isCheckDisability: true },

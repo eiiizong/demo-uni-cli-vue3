@@ -134,7 +134,7 @@ import ComponentButton from '@/components/common/ez-button/ez-button.vue'
 
 import config from '@/config'
 import { checkIDCard } from '@/utils/check'
-import { getIsDev } from '@/utils/get'
+import { getIsDevEnv } from '@/utils/get'
 import {
   navigateTo,
   request,
@@ -266,7 +266,7 @@ export default {
         return false
       }
       // 开发环境关闭人脸识别
-      const isDev = getIsDev()
+      const isDev = getIsDevEnv()
       if (isDev) {
         this.handleLogin()
         return false

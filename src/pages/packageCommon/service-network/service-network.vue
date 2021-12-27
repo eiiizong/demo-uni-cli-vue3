@@ -122,7 +122,7 @@ import {
 } from '@/utils/uni-api/index'
 import config from '@/config/index'
 import { bMapToQQMap } from '@/utils/convert/index'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 import { getCodeListByCodeName } from '@/utils/custom-api/index'
 export default {
   name: 'pageServiceNetwork',
@@ -180,7 +180,7 @@ export default {
     },
     // 获取码表
     async getCodeTableCacheData() {
-      const isDev = getIsDev() // 当前环境是否是开发环境
+      const isDev = getIsDevEnv() // 当前环境是否是开发环境
       let chm032 = [] // 儿童与监护人关系
 
       try {

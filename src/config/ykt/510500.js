@@ -1,12 +1,12 @@
-/* 
+/*
   配置文件
   文件中保存的是一些常用配置 请谨慎更改 更改前请确认是否存在使用
 */
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 
 let requestUrl = ''
-const isDev = getIsDev()
+const isDev = getIsDevEnv()
 if (isDev) {
   requestUrl = testRequestUrl
 } else {
@@ -32,7 +32,7 @@ const config510500 = {
   isRequestYGFF: false,
   // 是否开启阳光发放请求 true 开启 兼容甘孜
   isOpenYGFF: false,
-  // 是否开启数据加密，配合后台使用 true 开启  
+  // 是否开启数据加密，配合后台使用 true 开启
   isOpenDataEncrypt: false,
   // 服务网点是否使用百度地图
   isUseBMap: true,

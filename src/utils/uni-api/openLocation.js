@@ -1,4 +1,4 @@
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 /**
  * 使用微信内置地图查看位置
  * @param {number} latitude 纬度，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系
@@ -6,10 +6,10 @@ import { getIsDev } from '@/utils/get/index'
  * @param {string} name 位置名
  * @param {string} address 地址的详细说明
  * @param {number} scale 缩放比例
- * 
- * @support 
+ *
+ * @support
  * 微信小程序支持情况说明：https://developers.weixin.qq.com/miniprogram/dev/api/location/wx.openLocation.html
- * 
+ *
  * uniapp支持情况说明：https://uniapp.dcloud.io/api/location/open-location?id=openlocation
  * @returns {Promise}
  *
@@ -24,7 +24,7 @@ import { getIsDev } from '@/utils/get/index'
  */
 const openLocation = (latitude, longitude, name, address, scale = 18) => {
   // 当前环境是否为开发环境
-  const isDev = getIsDev()
+  const isDev = getIsDevEnv()
   // #ifdef MP-ALIPAY
   // #endif
   return new Promise((resolve, reject) => {

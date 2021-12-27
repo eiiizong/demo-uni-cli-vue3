@@ -1,6 +1,6 @@
 import config from '@/config/index'
 import { Decrypt } from '@/utils/AES.js'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 import { hideLoading } from './hideLoading'
 import { showModal } from './index'
 /**
@@ -22,7 +22,7 @@ import { showModal } from './index'
  */
 const uploadFile = (url, filePath, name, header, formData, timeout) => {
   // 当前环境是否为开发环境
-  const isDev = getIsDev()
+  const isDev = getIsDevEnv()
   // #ifdef MP-ALIPAY
   // #endif
   // const httpExp = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/

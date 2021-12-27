@@ -1,12 +1,12 @@
-/* 
+/*
   配置文件
   文件中保存的是一些常用配置 请谨慎更改 更改前请确认是否存在使用
 */
 import { testRequestUrl, formalRequestUrl } from '@/config/city'
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 
 let requestUrl = ''
-const isDev = getIsDev()
+const isDev = getIsDevEnv()
 if (isDev) {
   requestUrl = testRequestUrl
 } else {

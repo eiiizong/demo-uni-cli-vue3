@@ -1,11 +1,11 @@
-import { getIsDev } from '@/utils/get/index'
+import { getIsDevEnv } from '@/utils/get/index'
 /**
  * 拨打电话
  * @param {string} phoneNumber 需要拨打的电话号码
- * 
- * @support 
+ *
+ * @support
  * 微信小程序支持情况说明：https://developers.weixin.qq.com/miniprogram/dev/api/device/phone/wx.makePhoneCall.html
- * 
+ *
  * uniapp支持情况说明：https://uniapp.dcloud.io/api/system/phone?id=makephonecall
  * @returns {Promise}
  *
@@ -20,7 +20,7 @@ import { getIsDev } from '@/utils/get/index'
  */
 const makePhoneCall = (phoneNumber) => {
   // 当前环境是否为开发环境
-  const isDev = getIsDev()
+  const isDev = getIsDevEnv()
   // #ifdef MP-ALIPAY
   // #endif
   return new Promise((resolve, reject) => {

@@ -2,12 +2,7 @@
 
 // 全局控制变量 包括 mixins
 
-@import './variables/index';
+@import "./variables/index";
 
-@import './components/index.scss';
-@import './project/index.scss';
-
-// 三资使用
-.uni-navbar--fixed {
-    width: 100%;
-}
+@import "./components/index.scss";
+@import "./project/index.scss";

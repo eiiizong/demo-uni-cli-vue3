@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-home {
-  // background-color: #f0f;
+  background-color: $primary;
   view {
     height: 600rpx;
   }

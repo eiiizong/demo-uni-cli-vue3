@@ -155,7 +155,7 @@ import {
 
 import {
   USER_INFO,
-  UPDATE_USER_INFO,
+  M_UPDATE_USER_INFO,
   UPDATE_USER_LIST,
 } from '@/store/constants' // 常量
 import { mapGetters } from 'vuex'
@@ -333,7 +333,7 @@ export default {
           requestGetYGFFUserInfo(idCard, false)
             .then((res) => {
               const { positionName, orgnamepath } = res
-              this.$store.commit(UPDATE_USER_INFO, {
+              this.$store.commit(M_UPDATE_USER_INFO, {
                 ...data,
                 positionName,
                 orgnamepath,
@@ -346,7 +346,7 @@ export default {
               })
             })
             .catch((err) => {
-              this.$store.commit(UPDATE_USER_INFO, {
+              this.$store.commit(M_UPDATE_USER_INFO, {
                 ...data,
                 positionName: '',
                 orgnamepath: '',
@@ -393,7 +393,7 @@ export default {
                 chb018: orgidpathArr[4] || '9999',
               })
 
-              this.$store.commit(UPDATE_USER_INFO, {
+              this.$store.commit(M_UPDATE_USER_INFO, {
                 ...data,
                 positionName: positionNameArr.join(','),
                 orgnamepath: orgnamepath.split('/').join(''),
@@ -407,7 +407,7 @@ export default {
             })
             .catch((err) => {
               hideLoading()
-              this.$store.commit(UPDATE_USER_INFO, {
+              this.$store.commit(M_UPDATE_USER_INFO, {
                 ...data,
                 positionName: '',
                 orgnamepath: '',
@@ -464,7 +464,7 @@ export default {
               chb018: orgidpathArr[4] || '',
             })
 
-            this.$store.commit(UPDATE_USER_INFO, {
+            this.$store.commit(M_UPDATE_USER_INFO, {
               ...data,
               positionList: positionList.list,
               chi031List: chi031List.list,
@@ -496,7 +496,7 @@ export default {
                     }
                   })
                 }
-                this.$store.commit(UPDATE_USER_INFO, {
+                this.$store.commit(M_UPDATE_USER_INFO, {
                   ...this.userInfo,
                   chi031SetList: list,
                   chi031CanHandleList: arr,
@@ -567,7 +567,7 @@ export default {
           hideLoading()
         }
 
-        this.$store.commit(UPDATE_USER_INFO, {
+        this.$store.commit(M_UPDATE_USER_INFO, {
           ...data,
           ...personalInfo,
           ...SSCInfo,

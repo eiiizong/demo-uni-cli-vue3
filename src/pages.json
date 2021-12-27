@@ -19,9 +19,9 @@
       "root": "pages/packageCommon",
       "pages": [
         {
-          "path": "login/login",
+          "path": "user-agreement/user-agreement",
           "style": {
-            "navigationBarTitleText": "登录"
+            "navigationBarTitleText": "用户协议"
           }
         }
       ]
@@ -65,8 +65,8 @@
     "current": 0,
     "list": [
       {
-        "name": "packageCommon-login",
-        "path": "pages/packageCommon/login/login",
+        "name": "packageCommon-user-agreement",
+        "path": "pages/packageCommon/user-agreement/user-agreement",
         "query": ""
       }
     ]

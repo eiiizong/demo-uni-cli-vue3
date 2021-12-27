@@ -6,7 +6,7 @@ import {
   hideLoading,
   request,
   navigateTo,
-} from '@/utils/uni-api/index.js'
+} from '~/plugins/uni-api/index.js'
 /**
  * 预览 pdf
  * @param {string} chi050 必填。文件码值，可通过 downFile 获得
@@ -64,7 +64,7 @@ const previewPDFH5 = (chi050, chi056 = 'pdf', type = 'ygsp') => {
                 )
                   .then(() => {})
                   .finally(() => {
-                    
+
                   })
               } else {
                 hideLoading()

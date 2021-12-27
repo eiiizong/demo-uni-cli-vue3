@@ -1,8 +1,8 @@
-import { request, getStorage, setStorage, showModal } from '@/utils/uni-api/index'
+import { request, getStorage, setStorage, showModal } from '~/plugins/uni-api/index'
 /**
  * getCodeListByCodeName 获取码表并缓存
  * @param {string} codeName 码表名
- * @support 
+ * @support
 
  * @returns {Promise}
  *

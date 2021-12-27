@@ -5,7 +5,7 @@ import {
   hideLoading,
   base64ToArrayBuffer,
   request,
-} from '@/utils/uni-api/index.js'
+} from '~/plugins/uni-api/index.js'
 /**
  * 预览 pdf
  * @param {string} chi050 必填。文件码值，可通过 downFile 获得

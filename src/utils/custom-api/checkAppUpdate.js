@@ -2,7 +2,7 @@ import {
   getUpdateManager,
   showModal,
   clearStorage,
-} from '@/utils/uni-api/index.js'
+} from '~/plugins/uni-api/index.js'
 /**
  * 检测程序是否有更新，提示用户更新重启应用
  *

@@ -5,7 +5,7 @@ import {
   removeStorage,
   showModal,
   navigateTo,
-} from '@/utils/uni-api/index.js'
+} from '~/plugins/uni-api/index.js'
 import config from '@/config/index'
 /**
  * 自定义登录 业务逻辑请自行更改
